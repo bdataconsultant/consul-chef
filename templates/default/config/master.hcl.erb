@@ -12,6 +12,8 @@ performance = {
     raft_multiplier = 1
 }
 
+client_addr = "0.0.0.0"
+
 verify_incoming = true
 verify_outgoing = true
 verify_server_hostname = false
@@ -22,6 +24,6 @@ ca_file = "<%= @hops_ca %>"
 cert_file = "<%= @certificate %>"
 key_file = "<%= @key %>"
 ports = {
-   http = -1,
+   http = 8500,
    https = <%= node['consul']['http_api_port'] %>
 }
